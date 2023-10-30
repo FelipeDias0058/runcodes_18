@@ -3,13 +3,13 @@ def main():
     #Se a nota estiver entre 0 e 10, avança para as condicionais.
     #Se a nota for inválida, imprime um aviso e repete o input.
     while True:
-        try:
-            nota = float(input())
-        except ValueError:
-            print("Nota inválida.")
-            continue
-        else:
+        nota = float(input(""))
+
+        if 0 <= nota <= 10:
             break
+        else:
+            print("Nota inválida.")
+
 
     #As condicionais atribuem uma letra dependendo da nota.        
     if nota >= 8.5:
@@ -20,7 +20,7 @@ def main():
         conceito = "C"
     elif nota >= 4.0:
         conceito = "D"
-    else:
+    elif nota >= 0.0:
         conceito = "E"
 
     #Saída de Dados
@@ -28,3 +28,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
